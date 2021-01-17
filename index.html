@@ -30,16 +30,16 @@
                 </div>
                 <div class="col-md-4 col-xl-2">
                     <a class="btn btn-link btn-info btn-lg text-white mt-4 text-nowrap" role="button"
-                        data-toggle="modal" data-target="#reserveCampsite"> Reserve Campsite</a>
+                        id="reserveButton"> Reserve Campsite</a>
                 </div>
             </div>
     </header>
 
-    <div id="reserveCampsite" class="modal fade" role="dialog">
+    <div id="reserveModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-header bg-info text-white">
-                    <h3 class="card-header">Reserve A Campsite</h3>
+                <div class="modal-header">
+                    <h3 class="modal-title">Reserve A Campsite</h3>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
@@ -48,7 +48,7 @@
                             <div class="form-group row">
                                 <label for="numCampers" class="col-sm-6 col-form-label">Number of Campers</label>
                                 <div class="col">
-                                    <select id="numCampers" name="numCampers" class="col" class="form-control">
+                                    <select id="numCampers" name="numCampers" class="col form-control">
                                         <option>Select...</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -65,26 +65,25 @@
                                     <input type="date" id="date" name="date" placeholder="Date" class="form-control">
                                 </div>
                             </div>
-                        </form>
-                        <div class="form-group row">
-                            <label class="col-sm-6 col-form-label">Campsite Type</label>
-                            <div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
-                                <label for="tent" class="btn btn-success active">
-                                    <input type="radio" name="siteType" id="tent" checked> Tent
-                                </label>
-                                <label for="rv" class="btn btn-primary">
-                                    <input type="radio" name="siteType" id="rv"> RV
-                                </label>
+                            <div class="form-group row">
+                                <label class="col-sm-6 col-form-label">Campsite Type</label>
+                                <div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label for="tent" class="btn btn-success active">
+                                        <input type="radio" name="siteType" id="tent" checked> Tent
+                                    </label>
+                                    <label for="rv" class="btn btn-primary">
+                                        <input type="radio" name="siteType" id="rv"> RV
+                                    </label>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-primary">Search</button>
-                        </div>
-                    </div>
-                    </form>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Search</button>
+                                </div>
+                            </div>
+                        </form>
                 </div>
             </div>
         </div>
@@ -110,7 +109,7 @@
                                 class="fa fa-address-card fa-lg"></i> Contact</a></li>
                 </ul>
                 <span class="navbar-text ml-auto">
-                    <a role="button" data-toggle="modal" data-target="#loginModal">
+                    <a role="button" id="loginButton">
                         <i class="fa fa-sign-in"></i> Login
                     </a>
                 </span>
@@ -210,7 +209,7 @@
             </div>
         </div>
 
-        <div class="row row-content align-items-center">
+        <div class="row row-content">
             <div class="col-sm-4 order-sm-last col-md-3">
                 <h2 class="text-sm-right">Discover & Review</h2>
             </div>
@@ -227,8 +226,7 @@
             </div>
         </div>
 
-        <div class="row row-content
-        align-items-center">
+        <div class="row row-content">
             <div class="col-sm-4 col-md-3">
                 <h2>Featured Campsites</h2>
             </div>
@@ -247,7 +245,7 @@
     </div>
 
     <div class="container">
-        <div class="row row-content align-items-center">
+        <div class="row row-content">
             <div class="col-sm-4 order-sm-last col-md-3">
                 <h2 class="text-sm-right">Our Community Partners</h2>
             </div>
